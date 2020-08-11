@@ -1,10 +1,9 @@
-Jenkinsfile (Declarative Pipeline)
 pipeline {
-    agent { docker { image 'node:6.3' } }
+    agent any
     stages {
-        stage('build') {
+        stage ('Build Docker Image') {
             steps {
-                sh 'npm --version'
+                sh "docker build -t mfaizfatah/belajar:alpha ."
             }
         }
     }
