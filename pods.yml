@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+    name: calculator
+    labels: 
+        app: calculator
+spec:
+    containers:
+        - name: calculator
+          image: mfaizfatah/belajar:alpha
+          ports:
+            - containerPort: 8080
