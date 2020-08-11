@@ -11,7 +11,7 @@ pipeline {
             steps {
                 withCredentials([string(credentialsId: 'docker-hub', variable: 'dockerHubPwd')]) {
               // some block
-              bat "docker logn -u mfaizfatah -p ${dockerHubPwd}"
+              bat "docker login -u mfaizfatah -p ${dockerHubPwd}"
               bat "docker push mfaizfatah/belajar:alpha"
             }
             }
