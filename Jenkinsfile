@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage ('Build Docker Image') {
             steps {
-                sh "docker build -t mfaizfatah/belajar:alpha ."
+                cmd "docker build -t mfaizfatah/belajar:alpha ."
             }
         }
     }
